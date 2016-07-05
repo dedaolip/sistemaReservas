@@ -20,6 +20,9 @@ class CreateReservationsTable extends Migration
             $table->integer('projector_id')->nullable();//id do projetor
             $table->integer('notebook_id')->nullable();//id do notebook
             $table->integer('speaker_id')->nullable();//id da caixa de som
+            $table->date('date')->unsigned();
+            $table->string('period', 20)->unsigned();
+            $table->string('block', 20)->unsigned();
             $table->timestamps();
 
             //fk

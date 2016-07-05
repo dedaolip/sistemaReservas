@@ -14,5 +14,8 @@ class Reservation extends Model
 		'projector_id',
 		'notebook_id',
 		'speaker_id',
+		'date',
+		'period',
+		'block',
 	];
 }
