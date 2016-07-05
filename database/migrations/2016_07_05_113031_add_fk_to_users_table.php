@@ -13,7 +13,7 @@ class AddFkToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function ($table) {
-            $table->integer('people_id')->unsigned();
+            //$table->integer('people_id')->unsigned();
 
             $table->foreign('people_id')->references('id')->on('people');
         });
