@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\User;
 
 class Person extends Model
 {
@@ -15,5 +16,10 @@ class Person extends Model
 		'phone',
 		'mobile',
 	];
+
+	public function user()
+    {
+        return $this->hasOne('App\User');
+    }
 
 }
