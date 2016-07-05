@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Reservation;
 
 class Speaker extends Model
 {
@@ -12,4 +13,9 @@ class Speaker extends Model
 		'model',
 		'patrimony',
 	];
+
+	public function reservations()
+    {
+        return $this->hasMany('App\Reservation');
+    }
 }

@@ -3,10 +3,16 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Reservation;
 
 class Class extends Model
 {
     protected $fillable = [
 		'name'
 	];
+
+	public function reservations()
+    {
+        return $this->hasMany('App\Reservation');
+    }
 }

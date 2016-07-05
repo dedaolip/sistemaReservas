@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Reservation;
 
 class Projector extends Model
 {
@@ -12,4 +13,9 @@ class Projector extends Model
 		'model',
 		'patrimony',
 	];
+
+	public function reservations()
+    {
+        return $this->hasMany('App\Reservation');
+    }
 }

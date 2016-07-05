@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Person;
+use App\Reservation;
 
 class Teacher extends Model
 {
@@ -14,5 +15,10 @@ class Teacher extends Model
 	public function person()
     {
         return $this->belongsTo('App\Person');
+    }
+
+    public function reservations()
+    {
+        return $this->hasMany('App\Reservation');
     }
 }
