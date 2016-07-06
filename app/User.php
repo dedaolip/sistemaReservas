@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Person;
+use App\Teacher;
 
 class User extends Authenticatable
 {
@@ -25,8 +26,13 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function person()
+    public function people()
     {
         return $this->belongsTo('App\Person');
+    }
+
+    public function teacher()
+    {
+        return $this->hasOne('App\Teacher');
     }
 }

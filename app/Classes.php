@@ -3,10 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Reservation;
+//use Reservation;
 
-class Class extends Model
+class Classes extends Model
 {
+    protected $table = 'classes';
+
     protected $fillable = [
 		'name'
 	];

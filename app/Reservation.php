@@ -3,12 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Teacher:
-use App\Class:
-use App\Projector:
-use App\Notebook:
-use App\Classroom:
-use App\Speaker:
+use App\Teacher;
+use App\Classes;
+use App\Projector;
+use App\Notebook;
+use App\Classroom;
+use App\Speaker;
 
 class Reservation extends Model
 {
@@ -30,9 +30,9 @@ class Reservation extends Model
         return $this->belongsTo('App\Teacher');
     }
 
-    public function class()
+    public function classes()
     {
-        return $this->belongsTo('App\Class');
+        return $this->belongsTo('App\Classes');
     }
 
     public function projector()
@@ -47,7 +47,7 @@ class Reservation extends Model
 
     public function classroom()
     {
-        return $this->belongsTo('App\Classromm');
+        return $this->belongsTo('App\Classroom');
     }
 
     public function speaker()
